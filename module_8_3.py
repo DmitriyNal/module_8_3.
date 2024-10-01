@@ -24,6 +24,7 @@ class Car:
             raise IncorrectVinNumber('Некорректный тип vin номер')
         if not 1000000 <= vin_number <= 9999999:
             raise IncorrectVinNumber('Неверный диапазон для vin номера')
+        self.__vin = vin_number
         return True
 
 
@@ -33,6 +34,7 @@ class Car:
             raise IncorrectCarNumbers('Некорректный тип данных для номеров')
         if len(number) != 6:
             raise IncorrectCarNumbers('Неверная длина номера')
+        self.__number = number
         return True
 
 if __name__ == '__main__':
